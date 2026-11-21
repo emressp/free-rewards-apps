@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Free apps that reward stuff you already do</title>
+  <meta name="description" content="Two free Android apps for people in the United States. Reco offers cash rewards for playing games. PenguPace gives points for walking and games. Rewards follow each app's own terms.">
+  <link rel="canonical" href="https://emressp.github.io/free-rewards-apps/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta name="theme-color" content="#f4efe6">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Free Rewards Apps">
+  <meta property="og:title" content="Free apps that reward stuff you already do">
+  <meta property="og:description" content="Two free Android apps for people in the United States. Reco offers cash rewards for playing games. PenguPace gives points for walking and games.">
+  <meta property="og:url" content="https://emressp.github.io/free-rewards-apps/">
+  <meta property="og:image" content="https://emressp.github.io/free-rewards-apps/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Free apps that reward stuff you already do. Reco and PenguPace. Affiliate links. Rewards follow each app's own terms.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Free apps that reward stuff you already do">
+  <meta name="twitter:description" content="Two free Android apps for people in the United States. Reco offers cash rewards for playing games. PenguPace gives points for walking and games.">
+  <meta name="twitter:image" content="https://emressp.github.io/free-rewards-apps/og.png">
+  <style>
+    :root {
+      --bg: #f4efe6;
+      --paper: #fffdf8;
+      --ink: #16181d;
+      --muted: #5a616c;
+      --line: #e2d9cc;
+      --reco: #1b1833;
+      --reco-accent: #f0c14b;
+      --pengu: #0e3b36;
+      --pengu-accent: #7ee8aa;
+      --focus: #1d4ed8;
+      --warn: #f3e6c8;
+      --warn-ink: #3d2e0a;
+      --radius: 22px;
+      --shadow: 0 16px 40px rgba(22, 24, 29, 0.08);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Segoe UI", "Helvetica Neue", system-ui, -apple-system, Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    a { color: inherit; }
+    .skip {
+      position: absolute;
+      left: 12px;
+      top: -48px;
+      background: var(--ink);
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 8px;
+      z-index: 10;
+    }
+    .skip:focus { top: 12px; }
+    .wrap {
+      width: min(1080px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+    header.site {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 22px 0 8px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      text-decoration: none;
+    }
+    .mark {
+      width: 32px;
+      height: 32px;
+      flex: none;
+    }
+    .chip {
+      font-size: 0.78rem;
+      font-weight: 650;
+      color: var(--muted);
+      border: 1px solid var(--line);
+      background: var(--paper);
+      border-radius: 999px;
+      padding: 6px 12px;
+      white-space: nowrap;
+    }
+    .disclosure {
+      margin: 16px 0 8px;
+      background: var(--warn);
+      color: var(--warn-ink);
+      border: 1px solid #e4d2a4;
+      border-radius: 14px;
+      padding: 12px 16px;
+      font-size: 0.92rem;
+    }
+    .hero {
+      padding: 36px 0 12px;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 36px;
+      align-items: center;
+    }
+    .eyebrow {
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(2.05rem, 5.4vw, 3.55rem);
+      line-height: 1.05;
+      letter-spacing: -0.038em;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+    .lede {
+      font-size: 1.12rem;
+      color: var(--muted);
+      max-width: 38rem;
+    }
+    .hero-art {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .section { padding: 42px 0 8px; }
+    h2 {
+      font-size: 1.45rem;
+      letter-spacing: -0.03em;
+      margin-bottom: 18px;
+    }
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .step {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 22px 22px 20px;
+    }
+    .num {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--ink);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 14px;
+    }
+    .step h3 {
+      font-size: 1.05rem;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+    .step p { color: var(--muted); font-size: 0.96rem; }
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+    }
+    .card-top {
+      height: 168px;
+      display: grid;
+      place-items: center;
+      position: relative;
+    }
+    .card-top.reco { background: var(--reco); }
+    .card-top.pengu { background: var(--pengu); }
+    .card-top svg { width: 92px; height: 92px; }
+    .card-body { padding: 26px 26px 28px; display: flex; flex-direction: column; flex: 1; }
+    .app-name {
+      font-size: 1.55rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+    .app-sub {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin: 2px 0 14px;
+    }
+    .card-body > p { margin-bottom: 16px; }
+    ul {
+      list-style: none;
+      margin-bottom: 22px;
+    }
+    li {
+      position: relative;
+      padding: 7px 0 7px 28px;
+    }
+    li::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      position: absolute;
+      left: 2px;
+      top: 14px;
+    }
+    .reco-card li::before { background: var(--reco-accent); }
+    .pengu-card li::before { background: var(--pengu-accent); }
+    .cta {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      border-radius: 999px;
+      padding: 15px 18px;
+      margin-top: auto;
+      min-height: 52px;
+    }
+    .reco-card .cta {
+      background: var(--reco-accent);
+      color: var(--reco);
+    }
+    .pengu-card .cta {
+      background: var(--pengu-accent);
+      color: var(--pengu);
+    }
+    .cta:hover { filter: brightness(0.97); }
+    .cta:focus-visible,
+    a:focus-visible,
+    .skip:focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 3px;
+    }
+    .fine {
+      margin-top: 12px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+    .note, .privacy {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 22px 24px;
+    }
+    .note p + p, .privacy p + p { margin-top: 10px; }
+    .privacy { margin-top: 16px; }
+    .privacy a { color: var(--focus); }
+    footer.site {
+      padding: 36px 0 48px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+    footer.site p + p { margin-top: 10px; }
+    footer.site nav { margin-bottom: 14px; }
+    footer.site a { color: var(--ink); }
+    @media (max-width: 800px) {
+      .wrap { width: min(1080px, calc(100% - 28px)); }
+      .hero, .steps, .cards { grid-template-columns: 1fr; }
+      .hero { padding-top: 22px; gap: 20px; }
+      .hero-art { max-width: 360px; margin: 0 auto; }
+      header.site { padding-top: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="wrap">
+    <header class="site">
+      <a class="brand" href="https://emressp.github.io/free-rewards-apps/">
+        <svg class="mark" viewBox="0 0 32 32" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="#fffdf8"/>
+          <rect x="3" y="3" width="15" height="15" rx="4" fill="#1b1833"/>
+          <circle cx="8.5" cy="8.5" r="2.6" fill="#f0c14b"/>
+          <rect x="14" y="14" width="15" height="15" rx="4" fill="#0e3b36"/>
+          <circle cx="23.5" cy="23.5" r="2.6" fill="#7ee8aa"/>
+        </svg>
+        Free Rewards Apps
+      </a>
+      <span class="chip">Android · US only</span>
+    </header>
+
+    <aside class="disclosure" role="note">
+      This page contains affiliate links. We may earn a commission if you install an app, at no cost to you.
+    </aside>
+
+    <main id="main">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Free Android apps</p>
+          <h1>Free apps that reward stuff you already do</h1>
+          <p class="lede">Two free Android apps for people in the United States. Play games, or get points for walking. Rewards and points are issued by each app, under its own terms. Nothing on this page is a promise of income.</p>
+        </div>
+        <svg class="hero-art" viewBox="0 0 420 320" role="img" aria-label="Abstract illustration of a game controller and a walking path">
+          <rect x="16" y="28" width="186" height="264" rx="36" fill="#1b1833"/>
+          <rect x="218" y="28" width="186" height="264" rx="36" fill="#0e3b36"/>
+          <circle cx="109" cy="118" r="28" fill="#f0c14b"/>
+          <rect x="62" y="176" width="94" height="58" rx="16" fill="#2a2648"/>
+          <circle cx="86" cy="205" r="9" fill="#f0c14b"/>
+          <circle cx="132" cy="205" r="9" fill="#f0c14b"/>
+          <circle cx="311" cy="116" r="28" fill="#7ee8aa"/>
+          <path d="M268 188c18 0 18 28 36 28s18-28 36-28 18 28 36 28" fill="none" stroke="#7ee8aa" stroke-width="8" stroke-linecap="round"/>
+          <circle cx="268" cy="188" r="6" fill="#7ee8aa"/>
+          <circle cx="376" cy="216" r="6" fill="#7ee8aa"/>
+        </svg>
+      </section>
+
+      <section class="section" aria-labelledby="how-title">
+        <h2 id="how-title">How it works</h2>
+        <div class="steps">
+          <article class="step">
+            <div class="num">1</div>
+            <h3>Install the app</h3>
+            <p>Choose an app below and install it on your Android phone. Both apps are free to download and are for users in the United States.</p>
+          </article>
+          <article class="step">
+            <div class="num">2</div>
+            <h3>Use it as usual</h3>
+            <p>Play games in Reco, or walk and play games in PenguPace. You use the app itself, not this website, to take part.</p>
+          </article>
+          <article class="step">
+            <div class="num">3</div>
+            <h3>Rewards follow the app's terms</h3>
+            <p>Points and cash rewards are issued by the app developers, not by this site. Amounts, eligibility, and payout rules can change, and nothing is guaranteed.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="apps-title">
+        <h2 id="apps-title">The apps</h2>
+        <div class="cards">
+          <article class="card reco-card">
+            <div class="card-top reco" aria-hidden="true">
+              <svg viewBox="0 0 92 92" fill="none">
+                <rect x="14" y="28" width="64" height="40" rx="14" fill="#2a2648"/>
+                <circle cx="34" cy="48" r="7" fill="#f0c14b"/>
+                <circle cx="58" cy="48" r="7" fill="#f0c14b"/>
+                <rect x="42" y="44" width="8" height="8" rx="2" fill="#f4efe6"/>
+              </svg>
+            </div>
+            <div class="card-body">
+              <h3 class="app-name">Reco</h3>
+              <p class="app-sub">Social and rewards app</p>
+              <p>Reco is a free social and rewards app. You can earn cash rewards for playing games in the app. Any payout follows Reco's own terms and requires a US or UK phone number.</p>
+              <ul>
+                <li>Free to download on Android</li>
+                <li>Cash rewards for playing games, under Reco's terms</li>
+                <li>Cash-out requires a US or UK phone number</li>
+              </ul>
+              <a class="cta" href="https://giftclick.org/?offer_id=5282&amp;aff_id=203386" target="_blank" rel="nofollow sponsored noopener">Get Reco on Android</a>
+              <p class="fine">Android · United States only</p>
+            </div>
+          </article>
+
+          <article class="card pengu-card">
+            <div class="card-top pengu" aria-hidden="true">
+              <svg viewBox="0 0 92 92" fill="none">
+                <path d="M22 58c14 0 14 16 26 16s14-16 26-16" stroke="#7ee8aa" stroke-width="6" stroke-linecap="round"/>
+                <circle cx="22" cy="58" r="5" fill="#7ee8aa"/>
+                <circle cx="74" cy="74" r="5" fill="#7ee8aa"/>
+                <circle cx="46" cy="32" r="12" fill="#7ee8aa"/>
+              </svg>
+            </div>
+            <div class="card-body">
+              <h3 class="app-name">PenguPace</h3>
+              <p class="app-sub">Rewards for Steps, by Scrambly</p>
+              <p>PenguPace is a free Android app by Scrambly. It gives you points for walking, plus points from games in the app. Points and any redemptions follow PenguPace's own terms.</p>
+              <ul>
+                <li>Free to download on Android</li>
+                <li>Points for walking and daily steps</li>
+                <li>Extra points from games in the app</li>
+              </ul>
+              <a class="cta" href="https://giftclick.org/?offer_id=5035&amp;aff_id=203386" target="_blank" rel="nofollow sponsored noopener">Get PenguPace on Android</a>
+              <p class="fine">Android · United States only</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="note">
+          <h2>Before you install</h2>
+          <p>Both apps are made for Android and are offered here to users in the United States only. Reco cash-out also requires a US or UK phone number.</p>
+          <p>These apps are made by their own developers. This site is not affiliated with Reco, PenguPace, or Scrambly beyond the referral links on this page.</p>
+        </div>
+        <section class="privacy" id="privacy" aria-labelledby="privacy-title">
+          <h2 id="privacy-title">Privacy</h2>
+          <p>This page uses no forms and collects no personal data. It does not use cookies or analytics.</p>
+          <p>The outbound buttons use the partner's tracking links on giftclick.org. That partner, and the app developers, may collect information under their own privacy policies after you leave this page.</p>
+        </section>
+      </section>
+    </main>
+
+    <footer class="site">
+      <nav><a href="#privacy">Privacy</a></nav>
+      <p>This page contains affiliate links. We may earn a commission if you install an app, at no cost to you.</p>
+      <p>Reco and PenguPace are made by their own developers. This site is not affiliated with them beyond the referral links on this page. Both apps are for Android and for users in the United States only. Rewards, points, and payouts follow each app's own terms and are not guaranteed.</p>
+    </footer>
+  </div>
+</body>
+</html>
